@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应聘信息填写</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* 照片上传区域样式 */
+        .photo-upload {
+            text-align: center;
+            margin: 20px auto;
+            width: 80%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .photo-upload label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>应聘信息填写</h1>
+    <form action="#">
+        <table>
+            <thead>
+                <tr>
+                    <th>信息类别</th>
+                    <th>详情</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>姓名</td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td>邮箱</td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td>电话</td>
+                    <td><input type="tel" id="phone" name="phone" required></td>
+                </tr>
+                <tr>
+                    <td>学历</td>
+                    <td><input type="text" id="education" name="education" value="博士" readonly></td>
+                </tr>
+                <tr>
+                    <td>专业</td>
+                    <td><input type="text" id="major" name="major" required></td>
+                </tr>
+                <tr>
+                    <td>工作经验</td>
+                    <td><textarea id="experience" name="experience" rows="5" required></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 照片上传区域 -->
+        <div class="photo-upload">
+            <label for="photo">上传申请人照片：</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+        </div>
+        <button type="submit">提交应聘信息</button>
+    </form>
+</body>
+
+</html>
